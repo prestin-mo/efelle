@@ -4,41 +4,50 @@ body {
 	padding: 0;
 	margin: 0;
 }
+
 @media only screen and (min-width: 64em){
 	body {
-	    font-size: 26px;
-	    line-height: 40px;
+		font-size: 26px;
+		line-height: 40px;
 	}
 }
+
+.clearfix:after, .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
 a {
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    text-decoration: none;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	text-decoration: none;
 }
 img {
-    max-width: 100%;
-    vertical-align: middle;
+	max-width: 100%;
+	vertical-align: middle;
 }
 
 
 .container {
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    max-width: 1000px;
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	max-width: 1000px;
 }
 
 #hd	{
-    width: 100%;
-    padding: 0;
-    background: #fff url(../images/header-bg.jpg) no-repeat top center;
-    background-size: cover;
-    position: relative;
-    z-index: 3000;
+	width: 100%;
+	padding: 0;
+	background: #fff url(../images/header-bg.jpg) no-repeat top center;
+	background-size: cover;
+	position: relative;
+	z-index: 3000;
 }
 
 @media only screen and (min-width: 64em){
@@ -48,13 +57,13 @@ img {
 	}
 }
 #hd .container {
-    width: 100% !important;
-    max-width: none;
+	width: 100% !important;
+	max-width: none;
 }
 
 @media only screen and (min-width: 64em){
 	#hd .container {
-    	max-width: 1000px;
+		max-width: 1000px;
 	}
 }
 
@@ -64,10 +73,12 @@ img {
 }
 
 #hd .phone{
+	font-size: 20px;
+	line-height: 1;
 	display: block;
 	position: absolute;
 	top: 5%;
-	right: 5%;
+	right: 2%;
 	text-decoration: none;
 	color: #333;
 }
@@ -76,23 +87,86 @@ img {
 }
 
 
+.navi {
+	overflow: hidden;
+	position: absolute;
+	top: 30px;
+	right: 0;
+}
+
+.navi a {
+	float: left;
+	display: none;
+	color: #446286;
+	text-align: center;
+	padding: 5px 15px;
+	text-decoration: none;
+	font-size: 17px;
+	background-color: #fff;
+	text-transform: uppercase;
+}
+
+.navi a:first-of-type{
+
+	margin-top: 51px;
+}
+.navi a:hover {
+	background-color: #2e3d4d;
+	color: #fff;
+}
+
+.navi .trigger {
+	float: right;
+	display: block;
+}
+.navi.responsive {
+	width: 100%;
+}
+.navi.responsive .trigger {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.navi.responsive a {
+	float: none;
+	display: block;
+	text-align: left;
+}
+
+@media only screen and (min-width: 64em){
+
+	.navi a{
+		display: block;
+		background: transparent;
+	}
+	.navi a:first-of-type{
+		display: none;
+	}
+	.navi a.trigger {
+		display: none;
+	}
+
+}
+
+
 #slideshow{
-    position: relative;
+	position: relative;
 }
 @media only screen and (min-width: 64em){
 	#slideshow{
-	    margin-top: 89px;
+		margin-top: 80px;
 	}
 }
 #slideshow:before {
-    content: '';
-    background: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 200;
+	content: '';
+	background: rgba(0, 0, 0, 0.1);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 200;
 }
 #slideshow img {
 	width: 100%;
@@ -137,10 +211,10 @@ img {
 }
 
 #slideshow .ss_overlay .sub-text:before {
-    position: absolute;
-    content: '';
-    height: 2px;
-    margin: 0 auto;
+	position: absolute;
+	content: '';
+	height: 2px;
+	margin: 0 auto;
 	left: 0;
 	right: 0;
 	width: 80px;
@@ -160,33 +234,33 @@ img {
 }
 
 #slideshow .ss_overlay .ss_button {
-  background: #446286;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0 25px;
-  text-align: center;
-  font-size: 0.5em;
-  display: inline-block;
-  transition-duration: 0.5s;
+	background: #446286;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 25px;
+	text-align: center;
+	font-size: 0.5em;
+	display: inline-block;
+	transition-duration: 0.5s;
 }
 
 
 #slideshow .ss_overlay .ss_button:hover {
-  background: #2e3d4d;
+	background: #2e3d4d;
 }
 
 #main{
-    background: #fff url(../images/woodgrain-bg.jpg) no-repeat top center;
-    background-size: cover;
-    padding: 60px 0;
+	background: #fff url(../images/woodgrain-bg.jpg) no-repeat top center;
+	background-size: cover;
+	padding: 60px 0;
 }
 
 
 #main .container{
-    margin: 0 auto 1.8em;
-    width: auto;
-    max-width: 1000px;
+	margin: 0 auto 1.8em;
+	width: auto;
+	max-width: 1000px;
 }
 
 
@@ -202,25 +276,21 @@ img {
 	margin-bottom: 1.8em;
 }
 #main .container .title:after {
-    position: absolute;
-    content: '';
-    height: 2px;
-    bottom: -.5em; 
-    margin: 0 auto;
+	position: absolute;
+	content: '';
+	height: 2px;
+	bottom: -.5em; 
+	margin: 0 auto;
 	left: 0;
-    right: 0;
+	right: 0;
 	width: 25px;
 	background: #222427;
 }
- 
+
 
 
 @media only screen and (min-width: 64em){
-	.row:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+
 	.row > .col {
 		border: 0px solid rgba(0, 0, 0, 0);
 		display: block;
@@ -244,46 +314,46 @@ img {
 
 
 .callouts a{
- 	display: block;
-    margin: 0 auto 1.8em;
- }
+	display: block;
+	margin: 0 auto 1.8em;
+}
 .callouts .wrapper{
 	position: relative;
 	max-width: 330px;
 	margin: auto;
 }
 .callouts .decor{
-    display: block;
-    margin: auto;
+	display: block;
+	margin: auto;
 }
 
 .callouts .title{
 	position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-    font-family: 'Teko', sans-serif;
-    font-size: 1.2em;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    z-index: 500;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+	font-family: 'Teko', sans-serif;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	z-index: 500;
 }
 .callouts .wrapper:before{
-    content: '';
-    background: rgba(0, 0, 0, 0.45);
-    position: absolute;
-    top: 80px;
-    bottom: 80px;
-    left: 65px;
-    right: 65px;
-    z-index: 200;
+	content: '';
+	background: rgba(0, 0, 0, 0.45);
+	position: absolute;
+	top: 80px;
+	bottom: 80px;
+	left: 65px;
+	right: 65px;
+	z-index: 200;
 	border-radius: 50%;
 	-o-transition:.5s;
 	-ms-transition:.5s;
@@ -293,20 +363,20 @@ img {
 }
 
 .callouts a:hover .wrapper:before{
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	border-radius: 0;
 }
 .callouts .title:after {
-    position: absolute;
-    content: '';
-    height: 2px;
-    bottom: -2px; 
-    margin: 0 auto;
+	position: absolute;
+	content: '';
+	height: 2px;
+	bottom: -2px; 
+	margin: 0 auto;
 	left: 0;
-    right: 0;
+	right: 0;
 	width: 25px;
 	background: #fff;
 	-o-transition:.5s;
@@ -318,8 +388,6 @@ img {
 .callouts a:hover .title:after {
 	width: 100px;
 }
-
-
 
 
 #ft {
@@ -339,7 +407,7 @@ img {
 	display: inline-block;
 	width: 50%;
 	text-align: right;
-    vertical-align: top;
+	vertical-align: top;
 }
 
 #ft .contact-info a{
@@ -355,18 +423,18 @@ img {
 	display: inline-block;
 }
 #ft .social a img{
-	 -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
 }
 #ft .social a:hover img{
-  -webkit-transform: scale(0.8);
-     -moz-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-       -o-transform: scale(0.8);
-          transform: scale(0.8);
-  z-index: 20;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	transform: scale(0.8);
+	z-index: 20;
 }
 #ft .legal {
 	margin-top: 1.2em;
