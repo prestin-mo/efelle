@@ -1,4 +1,139 @@
 body {
-  font: normal normal 20px/32px 'Roboto', Helvetica, Arial, sans-serif;
-  color: #0d0d0d;
+	font: normal normal 20px/32px 'Roboto', Helvetica, Arial, sans-serif;
+	color: #333333;
+	padding: 0;
+	margin: 0;
+}
+.container {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    max-width: 1000px;
+}
+
+#hd	{
+    width: 100%;
+    padding: 0;
+    background: #fff url(../images/header-bg.jpg) no-repeat top center;
+    background-size: cover;
+    position: relative;
+    z-index: 3000;
+}
+
+@media only screen and (min-width: 64em){
+	#hd	{
+		position: fixed;
+		top: 0;
+	}
+}
+#hd .container {
+    width: 100% !important;
+    max-width: none;
+}
+
+@media only screen and (min-width: 64em){
+	#hd .container {
+    	max-width: 1000px;
+	}
+}
+
+#hd .logo img{
+	max-width: 161px;
+
+}
+
+#hd .phone{
+	display: block;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	text-decoration: none;
+	color: #333;
+}
+#hd .phone:hover{
+	color: #446286;
+}
+
+
+#slideshow{
+    position: relative;
+}
+@media only screen and (min-width: 64em){
+	#slideshow{
+	    margin-top: 89px;
+	}
+}
+#slideshow img {
+	width: 100%;
+	vertical-align: top;
+	position: relative;
+	z-index: 1;
+}
+#slideshow .ss_overlay {
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	z-index: 400;
+	color: #fff;
+	text-shadow: 0 0 15px #000;
+	text-align: center;
+}
+
+@media only screen and (min-width: 64em){
+	#slideshow .ss_overlay {
+		text-align: left;
+		max-width: 1000px;
+		margin: auto;
+		right: 0;
+	}
+}
+
+#slideshow .ss_overlay .trait {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 1.8em;
+	line-height: 1;
+	margin-bottom: .25em;
+}
+#slideshow .ss_overlay .main{
+	font-size: 3em;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 1;
+}
+
+
+#slideshow .ss_overlay .ss_button {
+  background: #446286;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 25px;
+  text-align: center;
+  font-size: 0.5em;
+  display: inline-block;
+  transition-duration: 0.5s;
+}
+
+
+#slideshow .ss_overlay .ss_button:hover {
+  background: #2e3d4d;
+}
+
+
+#main{
+
+    background: #fff url(../images/woodgrain-bg.jpg) no-repeat top center;
+    background-size: cover;
+
+}
+
+#ft {
+	color: #fff;
+	background: #222427;
 }
