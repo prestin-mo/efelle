@@ -65,11 +65,21 @@ body {
 	    margin-top: 89px;
 	}
 }
+#slideshow:before {
+    content: '';
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
 #slideshow img {
 	width: 100%;
 	vertical-align: top;
 	position: relative;
-	z-index: 1;
+	z-index: 100;
 }
 #slideshow .ss_overlay {
 	width: 100%;
@@ -125,13 +135,116 @@ body {
   background: #2e3d4d;
 }
 
-
 #main{
-
     background: #fff url(../images/woodgrain-bg.jpg) no-repeat top center;
     background-size: cover;
-
+    padding: 60px 0;
 }
+#main .container{
+    margin: 0 4.5%;
+    width: 0 auto 1.8em;
+    max-width: 1000px;
+}
+
+#main .container .tagline{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: .8em;
+}
+#main .container .title{
+	text-align: center;
+	font-weight:400;
+	font-size: 1.2em;
+	margin-bottom: 1.8em;
+}
+#main .container .title:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: -4px; 
+    margin: 0 auto;
+	left: 0;
+    right: 0;
+	width: 25px;
+	background: #222427;
+}
+ 
+ .callouts a{
+ 	display: block;
+    margin: 0 auto 1.8em;
+ }
+.callouts .wrapper{
+	position: relative;
+	max-width: 330px;
+	margin: auto;
+}
+.callouts .decor{
+    display: block;
+    margin: auto;
+}
+
+.callouts .title{
+	position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 500;
+}
+.callouts .wrapper:before{
+    content: '';
+    background: rgba(0, 0, 0, 0.45);
+    position: absolute;
+    top: 80px;
+    bottom: 80px;
+    left: 65px;
+    right: 65px;
+    z-index: 200;
+	border-radius: 50%;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+.callouts a:hover .wrapper:before{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	border-radius: 0;
+}
+.callouts .title:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: -2px; 
+    margin: 0 auto;
+	left: 0;
+    right: 0;
+	width: 25px;
+	background: #fff;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+.callouts a:hover .title:after {
+	width: 100px;
+}
+
 
 #ft {
 	color: #fff;
